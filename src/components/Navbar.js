@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { Button } from './Button';
 import { Link } from 'react-router-dom';
 
@@ -21,13 +21,17 @@ export default function Navbar() {
         }
     };
 
+    useEffect(() => {
+        showButton();
+    },[])
+
     window.addEventListener('resize', showButton);
     
     return (
     <>
         <nav className="navbar">
             <div className="nav-container">
-                <Link to="/" className="nav-logo">
+                <Link to="/" className="nav-logo" onClick={closeMenu}>
                     GameCave <i className="fas fa-gamepad" />
                 </Link>
                 <div className="menu-icon" onClick={clickHandler}>
@@ -41,7 +45,10 @@ export default function Navbar() {
                         <Link to="/services" className="nav-links" onClick={closeMenu}>Services</Link>
                     </li>
                     <li className="nav-item">
-                        <Link to="/gameroom" className="nav-links-mobile" onClick={closeMenu}>Game Room</Link>
+                        <Link to="/gallery" className="nav-links" onClick={closeMenu}>Gallery</Link>
+                    </li>
+                    <li className="nav-item">
+                        <Link to="/gamerooms" className="nav-links-mobile" onClick={closeMenu}>Game Room</Link>
                     </li>
                 </ul>
                 {button && <Button buttonStyle='btn-outline'>Games Room</Button>}
