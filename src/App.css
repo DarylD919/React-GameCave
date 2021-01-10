@@ -7,6 +7,7 @@
 
 .home,
 .services,
+.gallery,
 .gameroom {
   display: flex;
   height: 90vh;
@@ -25,6 +26,15 @@
 }
 
 .gameroom {
+  background-image: linear-gradient(to right, rgba(0, 255, 0, 0.952), rgb(200, 255, 0));
+  background-position: center;
+  background-size: fill;
+  background-repeat: no-repeat;
+  color: #fff;
+  font-size: 100px;
+}
+
+.gallery {
   background-image: linear-gradient(to right, rgba(0, 255, 0, 0.952), rgb(200, 255, 0));
   background-position: center;
   background-size: fill;

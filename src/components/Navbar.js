@@ -48,7 +48,7 @@ export default function Navbar() {
                         <Link to="/gallery" className="nav-links" onClick={closeMenu}>Gallery</Link>
                     </li>
                     <li className="nav-item">
-                        <Link to="/gamerooms" className="nav-links-mobile" onClick={closeMenu}>Game Room</Link>
+                        <Link to="/gameroom" className="nav-links-mobile" onClick={closeMenu}>Game Room</Link>
                     </li>
                 </ul>
                 {button && <Button buttonStyle='btn-outline'>Games Room</Button>}
