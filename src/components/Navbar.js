@@ -51,7 +51,7 @@ export default function Navbar() {
                         <Link to="/gameroom" className="nav-links-mobile" onClick={closeMenu}>Game Room</Link>
                     </li>
                 </ul>
-                {button && <Button buttonStyle='btn-outline'>Games Room</Button>}
+                {button && <Button buttonStyle='btn-outline'>Game Room</Button>}
             </div>
         </nav>
    </>
